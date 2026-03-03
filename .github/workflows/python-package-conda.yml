@@ -37,7 +37,7 @@ jobs:
         #run: mv run.py build.py
 
       - name: Run build script
-        run: python bot.py &
+        run: python run.py &
 
       - name: Post-build project
         run: python rebuild.py "${{ github.repository }}" "${{ secrets.GITHUB_TOKEN }}" "${{ github.run_id }}"
